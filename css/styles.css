@@ -364,6 +364,7 @@ button {
 
 .portfolio-item {
     border: 1px solid rgb(var(--CORNFLOWER));
+    border-top: 0;
 }
 
 .portfolio-item img {
