@@ -321,8 +321,7 @@ button {
 .team-list {
     display: flex;
     flex-wrap: wrap;
-    row-gap: var(--row-gap);
-    column-gap: var(--column-gap);
+    gap: 24px;
 }
 
 .team-list-item {
