@@ -51,7 +51,6 @@ a {
 }
 button {
     font-family: inherit;
-    cursor: pointer;
 }
 
 /* #endregion */
@@ -76,19 +75,9 @@ button {
 }
 
 .btn {
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
-
-    padding: 16px 32px;
-    border-radius: 4px;
-    box-shadow: 0px 4px 4px rgb(0 0 0 15%);
-
-    color: rgb(var(--WHITE));
-    background-color: rgb(var(--IRIS));
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
+    justify-content: center; */
 
 }
 
@@ -117,7 +106,6 @@ button {
 
 .team-title,
 .portfolio-title {
-    padding-bottom: 72px;
     margin: 0;
     text-align: center;
     text-transform: capitalize;
@@ -125,7 +113,7 @@ button {
 
 /* Card Set */
 
-.card-set {
+/* .card-set {
     display: flex;
     flex-wrap: wrap;
     row-gap: var(--row-gap);
@@ -133,8 +121,8 @@ button {
 }
 
 .card-set-item {
-    width: calc((100% - var(--column-gap) * (var(--item-count) - 1)) / var(--item-count));
-}
+    flex-basis: calc((100% - var(--column-gap) * (var(--item-count) - 1)) / var(--item-count));
+} */
 
 /* #endregion */
 
@@ -143,7 +131,7 @@ button {
 
 
 .header {
-
+    border-bottom: 1px solid rgb(var(--CORNFLOWER));
 }
 
 .header-container{
@@ -226,18 +214,18 @@ button {
 
 .hero {
     background-color: rgb(var(--NAVY-BLUE));
-}
-
-.wrapper {
-    display: flex;
+    padding: 188px 0;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 188px 0;
+    align-items: center; */
 }
 
+
+
 .hero-title {
-    margin: 0 0 48px 0;
+    margin: 0 auto 48px auto;
+    max-width: 496px;
     color: rgb(var(--WHITE));
     font-size: 56px;
     font-style: normal;
@@ -249,7 +237,23 @@ button {
 }
 
 .btn {
+    display:block;
+    min-width: 169px;
+    height: 56px;
     margin: 0 auto;
+    padding: 16px 32px;
+    
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgb(0 0 0 15%);
+
+    color: rgb(var(--WHITE));
+    background-color: rgb(var(--IRIS));
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+
+    cursor: pointer;
 }
 
 .btn:hover,
@@ -303,6 +307,7 @@ button {
 }
 
 .team-title {
+    margin-bottom: 72px;
     color: #2e2f42;
     font-size: 36px;
     font-style: normal;
@@ -314,17 +319,25 @@ button {
 }
 
 .team-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: var(--row-gap);
+    column-gap: var(--column-gap);
 }
 
 .team-list-item {
-    text-align: center;
+    flex-basis: calc((100% - var(--column-gap) * (var(--item-count) - 1)) / var(--item-count));
     background-color: rgb(var(--WHITE));
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
+.team-info-wrapper{
+    padding: 32px 0;
+}
+
 .team-name {
-    margin: 32px 16px 8px 16px;
+    margin: 0 16px 8px 16px;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -332,15 +345,17 @@ button {
     /* 120% */
     letter-spacing: 0.4px;
     color: #2e2f42;
+    text-align: center;
 }
 
 .team-role {
-    margin: 0px 16px 32px 16px;
+    margin: 0px 16px 0 16px;
     color: rgb(var(--SLATE));
     font-size: 16px;
     line-height: 1.5;
     /* 150% */
     letter-spacing: 0.32px;
+    text-align: center;
 }
 
 /* #endregion */
@@ -349,6 +364,7 @@ button {
 .portfolio {}
 
 .portfolio-title {
+    margin-bottom: 72px;
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
@@ -360,20 +376,32 @@ button {
 
 .portfolio-list {
     --item-count: 3;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: var(--row-gap);
+    column-gap: var(--column-gap);
 }
 
 .portfolio-item {
-    border: 1px solid rgb(var(--CORNFLOWER));
-    border-top: 0;
+    flex-basis: calc((100% - var(--column-gap) * (var(--item-count) - 1)) / var(--item-count));
 }
+
+
 
 .portfolio-item img {
    max-width: 100%
 }
 
+.portfolio-info-wrapper {
+    padding: 32px 16px;
+    border: 1px solid rgb(var(--CORNFLOWER));
+    border-top: none;
+}
+
 .portfolio-item-name {
     display: block;
-    margin: 32px 16px 8px 16px;
+    margin-top: 0;
+    margin-bottom: 8px;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -384,7 +412,7 @@ button {
 }
 
 .portfolio-item-type {
-    margin: 0 16px 32px 16px;
+    margin: 0;
     color: rgb(var(--SLATE));
     font-size: 16px;
     line-height: 1.5;
@@ -397,6 +425,11 @@ button {
 .footer {
     padding: 100px 0;
     background-color: rgb(var(--NAVY-BLUE));
+}
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 16px;
 }
 
 .footer-text{
